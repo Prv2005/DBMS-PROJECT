@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="home">
+        <h2>Welcome</h2>
+
+        <!-- Correct navigation -->
+        <a href="{{ url_for('st_login') }}" class="st_login">Student Login</a>
+        <a href="{{ url_for('tr_login') }}" class="tr_login">Teacher Login</a>
+
+        <p class="signup-text">
+            <a href="{{ url_for('signup') }}">Don't have an Account? Sign Up!</a>
+        </p>
+    </div>
+</body>
+</html>

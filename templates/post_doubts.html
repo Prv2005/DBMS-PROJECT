@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your Doubt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="doubt-container">
+        <h2>Post Your Doubt</h2>
+        <form action="/submit_doubt" method="POST" class="doubt-form">
+
+            <!-- Student Name (auto-filled if desired) -->
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Subject Dropdown -->
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select subject</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                    <option value="social_studies">Social Studies</option>
+                    <option value="computer_science">Computer Science</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Title of Doubt -->
+            <div class="form-group">
+                <label for="title">Doubt Title</label>
+                <input type="text" id="title" name="title" placeholder="Brief title for your doubt" required>
+            </div>
+
+            <!-- Detailed Description -->
+            <div class="form-group">
+                <label for="description">Describe Your Doubt</label>
+                <textarea id="description" name="description" rows="6" placeholder="Explain your doubt in detail..." required></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="doubt_submit">Submit Doubt</button>
+
+            <!-- Back to Dashboard -->
+            <p class="back-link">Go back to 
+                <a href="/dashboard">Dashboard</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

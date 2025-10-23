@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve Doubts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="solve-container">
+        <h2>Student Doubts</h2>
+
+        <!-- Example list of doubts (replace with dynamic content later) -->
+        <div class="doubt-card">
+            <div class="doubt-info">
+                <h3>Why does the sky appear blue?</h3>
+                <p><strong>Subject:</strong> Science</p>
+                <p><strong>Student:</strong> Arjun K</p>
+                <p class="description">
+                    I read that the sky looks blue due to scattering, but can you explain why it’s blue and not any other color?
+                </p>
+            </div>
+            <form action="/submit_answer" method="POST" class="answer-form">
+                <textarea name="answer" rows="3" placeholder="Type your answer here..." required></textarea>
+                <input type="hidden" name="doubt_id" value="1">
+                <button type="submit" class="answer_submit">Submit Answer</button>
+            </form>
+        </div>
+
+        <div class="doubt-card">
+            <div class="doubt-info">
+                <h3>How to find eigenvalues of a matrix?</h3>
+                <p><strong>Subject:</strong> Mathematics</p>
+                <p><strong>Student:</strong> Meera S</p>
+                <p class="description">
+                    I’m confused about the steps to find eigenvalues for a 2×2 matrix. Could you explain the process?
+                </p>
+            </div>
+            <form action="/submit_answer" method="POST" class="answer-form">
+                <textarea name="answer" rows="3" placeholder="Type your answer here..." required></textarea>
+                <input type="hidden" name="doubt_id" value="2">
+                <button type="submit" class="answer_submit">Submit Answer</button>
+            </form>
+        </div>
+
+        <p class="back-link">
+            <a href="/">← Back to Homepage</a>
+        </p>
+    </div>
+</body>
+</html>
